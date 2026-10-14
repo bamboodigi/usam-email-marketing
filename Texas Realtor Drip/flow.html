@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Texas Realtor Drip Flow</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --ink: #0e1a2b;
+        --body: #344054;
+        --muted: #667085;
+        --line: #e4e7ec;
+        --primary: #1a56c4;
+        --tint: #eef3fc;
+        --warn: #b54708;
+        --warn-bg: #fff6ed;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--body);
+        font:
+          16px/1.55 -apple-system,
+          "Hanken Grotesk",
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 16px 64px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--ink);
+        line-height: 1.2;
+        margin: 0;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 22px;
+        margin: 48px 0 8px;
+      }
+      h3 {
+        font-size: 17px;
+      }
+      p {
+        margin: 8px 0;
+      }
+      .lede {
+        color: var(--muted);
+        max-width: 720px;
+      }
+      .meta {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+      .chart {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 20px 12px;
+        margin-top: 16px;
+      }
+      .chart svg {
+        display: block;
+        width: 100%;
+        max-width: 760px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .card .day {
+        font-size: 13px;
+        color: var(--primary);
+        font-weight: 600;
+      }
+      .card h3 {
+        margin: 4px 0 6px;
+      }
+      .ask {
+        display: inline-block;
+        margin-top: 8px;
+        background: var(--tint);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 3px 10px;
+        font-size: 13px;
+      }
+      .src {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      ul {
+        padding-left: 20px;
+        margin: 8px 0;
+      }
+      li {
+        margin: 4px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        color: var(--ink);
+        background: var(--bg);
+        font-weight: 600;
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      .table-scroll {
+        overflow-x: auto;
+        margin-top: 12px;
+      }
+      .open {
+        background: var(--warn-bg);
+        border: 1px solid #f9dbaf;
+        border-radius: 14px;
+        padding: 16px 18px;
+        margin-top: 12px;
+      }
+      .open h3 {
+        color: var(--warn);
+      }
+      .shots {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 16px;
+      }
+      .shot {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+      }
+      .shot h3 {
+        font-size: 15px;
+      }
+      .shot .subj {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 4px 0 10px;
+      }
+      .frame {
+        height: 620px;
+        overflow-y: auto;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--bg);
+      }
+      .frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .shot a {
+        font-size: 13px;
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Texas realtor drip: flow and reasoning</h1>
+      <p class="lede">
+        Six cold emails to Texas MLS agents about one product: a second mortgage
+        on a rental the client doesn't live in, for business purposes only. The
+        goal is an introduction to an investor client, not an application from
+        the agent.
+      </p>
+      <p class="meta">
+        Draft 2026-10-14. Nothing has been sent, loaded or scheduled. Sources:
+        Drip plan.md, AUDIT-strategy-2026-10-14.md,
+        AUDIT-accuracy-compliance-2026-10-14.md and the four PANEL files (the
+        panel was four AI agents playing Texas agents, not real agents).
+      </p>
+
+      <h2>The flow</h2>
+      <div class="chart">
+        <svg
+          viewBox="0 0 760 1180"
+          role="img"
+          aria-labelledby="flowTitle flowDesc"
+        >
+          <title id="flowTitle">Drip flow</title>
+          <desc id="flowDesc">
+            10,294 Texas agents receive six sends over 48 days. Send 5 splits by
+            market into Austin, Houston, San Antonio and other versions.
+            Unsubscribing at any send removes the agent from the whole series. A
+            reply moves the agent to a one-to-one conversation with Jack. The
+            series ends after send 6.
+          </desc>
+          <defs>
+            <marker
+              id="ah"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="7"
+              markerHeight="7"
+              orient="auto-start-reverse"
+            >
+              <path d="M0,0 L10,5 L0,10 z" fill="#98A2B3" />
+            </marker>
+          </defs>
+          <style>
+            .box {
+              fill: #ffffff;
+              stroke: #d0d5dd;
+              stroke-width: 1.5;
+            }
+            .start {
+              fill: #0e1a2b;
+            }
+            .send {
+              fill: #ffffff;
+              stroke: #1a56c4;
+              stroke-width: 1.5;
+            }
+            .var {
+              fill: #eef3fc;
+              stroke: #1a56c4;
+              stroke-width: 1.2;
+            }
+            .end {
+              fill: #f2f4f7;
+              stroke: #98a2b3;
+              stroke-width: 1.5;
+            }
+            .side {
+              fill: #fff6ed;
+              stroke: #f9dbaf;
+              stroke-width: 1.2;
+            }
+            .t {
+              font:
+                600 17px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #0e1a2b;
+            }
+            .tw {
+              font:
+                600 17px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #ffffff;
+            }
+            .s {
+              font:
+                14px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #475467;
+            }
+            .sw {
+              font:
+                14px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #d0d5dd;
+            }
+            .d {
+              font:
+                600 13px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #1a56c4;
+            }
+            .a {
+              font:
+                14px -apple-system,
+                Helvetica,
+                Arial,
+                sans-serif;
+              fill: #1a56c4;
+            }
+            .ln {
+              stroke: #98a2b3;
+              stroke-width: 1.5;
+              fill: none;
+            }
+            .dash {
+              stroke: #f79009;
+              stroke-width: 1.5;
+              fill: none;
+              stroke-dasharray: 5 4;
+            }
+          </style>
+
+          <!-- start -->
+          <rect class="start" x="130" y="10" width="500" height="80" rx="12" />
+          <text class="tw" x="380" y="42" text-anchor="middle">
+            10,294 Texas MLS agents
+          </text>
+          <text class="sw" x="380" y="66" text-anchor="middle">
+            Houston 5,402 · San Antonio 3,271 · Austin 1,554 · 67 multi-market
+          </text>
+          <path class="ln" d="M380 90 V118" marker-end="url(#ah)" />
+
+          <!-- send 1 -->
+          <rect class="send" x="130" y="122" width="500" height="92" rx="12" />
+          <text class="d" x="150" y="146">SEND 1 · DAY 0</text>
+          <text class="t" x="150" y="172">
+            Their next down payment is in a rental
+          </text>
+          <text class="a" x="150" y="198">Ask: reply "investors"</text>
+          <path class="ln" d="M380 214 V242" marker-end="url(#ah)" />
+
+          <!-- send 2 -->
+          <rect class="send" x="130" y="246" width="500" height="92" rx="12" />
+          <text class="d" x="150" y="270">SEND 2 · DAY 6</text>
+          <text class="t" x="150" y="296">
+            Start the equity loan before the offer
+          </text>
+          <text class="a" x="150" y="322">Ask: open the calculator</text>
+          <path class="ln" d="M380 338 V366" marker-end="url(#ah)" />
+
+          <!-- send 3 -->
+          <rect class="send" x="130" y="370" width="500" height="92" rx="12" />
+          <text class="d" x="150" y="394">SEND 3 · DAY 13</text>
+          <text class="t" x="150" y="420">
+            Keep the first mortgage, borrow behind it
+          </text>
+          <text class="a" x="150" y="446">
+            Ask: forward the comparison guide
+          </text>
+          <path class="ln" d="M380 462 V490" marker-end="url(#ah)" />
+
+          <!-- send 4 -->
+          <rect class="send" x="130" y="494" width="500" height="92" rx="12" />
+          <text class="d" x="150" y="518">SEND 4 · DAY 20</text>
+          <text class="t" x="150" y="544">
+            What happens after you introduce a client
+          </text>
+          <text class="a" x="150" y="570">
+            Ask: with the client's OK, cc Jack
+          </text>
+          <path class="ln" d="M380 586 V614" marker-end="url(#ah)" />
+
+          <!-- split -->
+          <rect class="box" x="230" y="618" width="300" height="56" rx="28" />
+          <text class="t" x="380" y="652" text-anchor="middle">
+            Send 5 · day 34 · which market?
+          </text>
+          <path
+            class="ln"
+            d="M380 674 V694 M100 694 H660 M100 694 V716 M287 694 V716 M473 694 V716 M660 694 V716"
+          />
+          <path class="ln" d="M100 708 V718" marker-end="url(#ah)" />
+          <path class="ln" d="M287 708 V718" marker-end="url(#ah)" />
+          <path class="ln" d="M473 708 V718" marker-end="url(#ah)" />
+          <path class="ln" d="M660 708 V718" marker-end="url(#ah)" />
+
+          <rect class="var" x="14" y="722" width="172" height="92" rx="12" />
+          <text class="t" x="100" y="752" text-anchor="middle">s5b Austin</text>
+          <text class="s" x="100" y="776" text-anchor="middle">
+            Travis, Williamson,
+          </text>
+          <text class="s" x="100" y="796" text-anchor="middle">
+            Hays + Austin page
+          </text>
+
+          <rect class="var" x="201" y="722" width="172" height="92" rx="12" />
+          <text class="t" x="287" y="752" text-anchor="middle">
+            s5c Houston
+          </text>
+          <text class="s" x="287" y="776" text-anchor="middle">
+            Harris, Fort Bend,
+          </text>
+          <text class="s" x="287" y="796" text-anchor="middle">
+            Montgomery + page
+          </text>
+
+          <rect class="var" x="387" y="722" width="172" height="92" rx="12" />
+          <text class="t" x="473" y="752" text-anchor="middle">
+            s5d San Antonio
+          </text>
+          <text class="s" x="473" y="776" text-anchor="middle">
+            Bexar, Guadalupe,
+          </text>
+          <text class="s" x="473" y="796" text-anchor="middle">
+            Comal + page
+          </text>
+
+          <rect class="var" x="574" y="722" width="172" height="92" rx="12" />
+          <text class="t" x="660" y="752" text-anchor="middle">s5 Other</text>
+          <text class="s" x="660" y="776" text-anchor="middle">
+            Multi-market or
+          </text>
+          <text class="s" x="660" y="796" text-anchor="middle">
+            any other market
+          </text>
+
+          <path
+            class="ln"
+            d="M100 814 V834 M287 814 V834 M473 814 V834 M660 814 V834 M100 834 H660 M380 834 V858"
+          />
+          <path class="ln" d="M380 848 V860" marker-end="url(#ah)" />
+          <text class="a" x="392" y="852">Ask: run the calculator</text>
+
+          <!-- send 6 -->
+          <rect class="send" x="130" y="864" width="500" height="92" rx="12" />
+          <text class="d" x="150" y="888">SEND 6 · DAY 48</text>
+          <text class="t" x="150" y="914">
+            One client in mind? Terms and the only rate
+          </text>
+          <text class="a" x="150" y="940">
+            Ask: reply with an intro, or do nothing
+          </text>
+          <path class="ln" d="M380 956 V984" marker-end="url(#ah)" />
+
+          <!-- end -->
+          <rect class="end" x="180" y="988" width="400" height="64" rx="12" />
+          <text class="t" x="380" y="1016" text-anchor="middle">
+            Series ends
+          </text>
+          <text class="s" x="380" y="1038" text-anchor="middle">
+            Non-responders exit. No other series follows.
+          </text>
+
+          <!-- side rules -->
+          <rect class="side" x="14" y="1078" width="356" height="88" rx="12" />
+          <text class="t" x="30" y="1106">Unsubscribe at any send</text>
+          <text class="s" x="30" y="1130">
+            Out of the whole series. Suppression
+          </text>
+          <text class="s" x="30" y="1150">is checked before every send.</text>
+
+          <rect class="side" x="390" y="1078" width="356" height="88" rx="12" />
+          <text class="t" x="406" y="1106">
+            Agent replies or sends an intro
+          </text>
+          <text class="s" x="406" y="1130">
+            Moves to a one-to-one conversation
+          </text>
+          <text class="s" x="406" y="1150">
+            with Jack. Drip stop rule: open.
+          </text>
+        </svg>
+      </div>
+
+      <h2>Why it's built this way</h2>
+      <p class="lede">
+        The audience is an agent, not a borrower. The agent earns nothing from
+        the loan, so every email has to help them close their own next deal or
+        look good to an investor client.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="day">Send 1 · day 0</div>
+          <h3>Start with the agent's sale</h3>
+          <p>
+            An investor client's next down payment may already be sitting in a
+            rental they own. They can borrow against it and keep their first
+            mortgage. The email says who USA Mortgage is and who qualifies: a
+            1-4 unit rental worth $100K or more, held personally or in an LLC,
+            short-term rentals included.
+          </p>
+          <span class="ask">Reply "investors"</span>
+          <p class="src">
+            The MLS list has no "has investor clients" flag, so the one-word
+            reply is the filter (plan section 3). The strategy audit's top
+            finding: nothing told a stranger who USA Mortgage is.
+          </p>
+        </div>
+        <div class="card">
+          <div class="day">Send 2 · day 6</div>
+          <h3>Timing is the reason to call early</h3>
+          <p>
+            The second mortgage typically closes in 3-4 weeks, subject to
+            underwriting. Starting it before the offer keeps the agent's closing
+            from waiting on it.
+          </p>
+          <span class="ask">Open the calculator</span>
+          <p class="src">
+            Moved up from old E5. The Austin panelist said 3-4 weeks is slow
+            against a 25-30 day close, which is exactly why this email says to
+            start first.
+          </p>
+        </div>
+        <div class="card">
+          <div class="day">Send 3 · day 13</div>
+          <h3>Answer the client's first question</h3>
+          <p>
+            "Do I have to refinance?" A cash-out refi replaces the first
+            mortgage. A second leaves it in place. The comparison table is cut
+            to 3 rows.
+          </p>
+          <span class="ask">Forward the comparison guide</span>
+          <p class="src">
+            Forwarding a guide is a low-risk ask. The team-lead panelist wanted
+            one email clean enough to forward.
+          </p>
+        </div>
+        <div class="card">
+          <div class="day">Send 4 · day 20</div>
+          <h3>Show what happens after an intro</h3>
+          <p>
+            What the client is asked (value, first mortgage balance, rent, what
+            the money is for), what's checked, the 3-4 week typical close, lump
+            sum or line of credit.
+          </p>
+          <span class="ask">With the client's OK, cc Jack</span>
+          <p class="src">
+            New email. The strategy audit rated "no process shown" HIGH. All
+            four panelists objected to sending a client's numbers, so the client
+            sends their own after the intro.
+          </p>
+        </div>
+        <div class="card">
+          <div class="day">Send 5 · day 34</div>
+          <h3>Three plain checks, plus Texas</h3>
+          <p>
+            A rental they don't live in, rent that covers the payments, room
+            under 80% of value across all loans. Texas homestead rules in two
+            sentences, then the market's counties and local page.
+          </p>
+          <span class="ask">Run the calculator</span>
+          <p class="src">
+            Merges old E3 and E4. The Houston panelist stopped reading at the
+            constitutional-law section, so the legal citations are gone. Before
+            this rebuild, 8,673 Houston and San Antonio agents had no local
+            version.
+          </p>
+        </div>
+        <div class="card">
+          <div class="day">Send 6 · day 48</div>
+          <h3>A real exit</h3>
+          <p>
+            One client in mind? The terms in one line, including the only rate
+            in the series (fixed rates from 6.99%, typical terms, subject to
+            underwriting and market conditions). It says plainly that it's the
+            last email.
+          </p>
+          <span class="ask">Reply with an intro, or do nothing</span>
+          <p class="src">
+            The strategy audit flagged that the old exit moved people onto a
+            monthly list. Exit now means exit.
+          </p>
+        </div>
+      </div>
+
+      <h2>Rules every email follows</h2>
+      <div class="card" style="margin-top: 12px">
+        <ul>
+          <li>
+            <strong>Hook first in the preview text.</strong> The old preview
+            text opened with the disclosure, which the Houston panelist named as
+            the single biggest problem. The "Advertisement" line is now the
+            first line of the body.
+          </li>
+          <li>
+            <strong>Never asks the agent for a client's numbers,</strong> and
+            never says USA Mortgage will tell them whether a client is worth
+            applying (the accuracy audit's Reg B finding).
+          </li>
+          <li>
+            <strong>Facts only from the approved program data:</strong> $50K to
+            $1M, up to 80% CLTV, 660 credit score, 1.00 DSCR, 3-4 week typical
+            close.
+          </li>
+          <li><strong>No referral-fee line,</strong> per Blake.</li>
+          <li>
+            <strong>The same layout as the rest of the library:</strong> header
+            with Apply now, calculator banner, Keep reading cards, CTA band,
+            signatures and footer, per Blake.
+          </li>
+          <li>
+            <strong>Business purpose only</strong> in every email, and the legal
+            line in every footer.
+          </li>
+        </ul>
+      </div>
+
+      <h2>How we'll know it works</h2>
+      <div class="table-scroll">
+        <table>
+          <tr>
+            <th>Signal</th>
+            <th>Where</th>
+            <th>Why it counts</th>
+          </tr>
+          <tr>
+            <td>Intros with the client copied</td>
+            <td>Reply inbox, sends 4 and 6</td>
+            <td>The main success signal</td>
+          </tr>
+          <tr>
+            <td>"investors" replies</td>
+            <td>Reply inbox, send 1</td>
+            <td>Finds the agents with investor clients</td>
+          </tr>
+          <tr>
+            <td>Calculator and guide clicks</td>
+            <td>utm tags per file</td>
+            <td>Interest without a reply</td>
+          </tr>
+          <tr>
+            <td>Unsubscribes</td>
+            <td>SendGrid</td>
+            <td>Keep under 0.5% per send</td>
+          </tr>
+          <tr>
+            <td>Inquiries to funded loans</td>
+            <td>CRM, utm campaign</td>
+            <td>Tracked over 90 days</td>
+          </tr>
+        </table>
+      </div>
+      <p class="src">
+        Opens aren't used: Apple Mail inflates them. There's no baseline for
+        cold agent lists, so the first send sets it (plan section 4).
+      </p>
+
+      <div class="open">
+        <h3>Open before anything sends</h3>
+        <ul>
+          <li>
+            Who signs: Jack Lieberman has no NMLS number in the signature. All
+            four panelists raised it.
+          </li>
+          <li>
+            Listing-only agents (3,462): send them 1, 4 and 6 only, or the full
+            series.
+          </li>
+          <li>Whether a reply stops the drip for that agent.</li>
+          <li>A separate sending subdomain instead of jack@usam.net.</li>
+          <li>
+            The MLS list's terms of use, and the harvested Austin list (removed
+            as a send source pending counsel).
+          </li>
+          <li>Counsel review of where the advertisement label sits.</li>
+        </ul>
+      </div>
+
+      <h2>The emails on a phone (375px)</h2>
+      <p class="lede">
+        Scroll inside each frame. Subject A is shown under each title.
+      </p>
+      <div class="shots">
+        <div class="shot">
+          <h3>Send 1 · day 0</h3>
+          <p class="subj">Your investor client's next down payment</p>
+          <div class="frame">
+            <img
+              src="screenshots/s1-next-down-payment-375.jpg"
+              alt="Send 1 on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s1-next-down-payment.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 2 · day 6</h3>
+          <p class="subj">Start the equity loan before the offer</p>
+          <div class="frame">
+            <img
+              src="screenshots/s2-before-the-offer-375.jpg"
+              alt="Send 2 on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s2-before-the-offer.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 3 · day 13</h3>
+          <p class="subj">When your client asks: do I have to refinance?</p>
+          <div class="frame">
+            <img
+              src="screenshots/s3-keep-the-first-375.jpg"
+              alt="Send 3 on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s3-keep-the-first.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 4 · day 20</h3>
+          <p class="subj">What happens after you introduce a client</p>
+          <div class="frame">
+            <img
+              src="screenshots/s4-what-happens-after-an-intro-375.jpg"
+              alt="Send 4 on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s4-what-happens-after-an-intro.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 5 · Austin</h3>
+          <p class="subj">
+            Three checks before you introduce an investor client
+          </p>
+          <div class="frame">
+            <img
+              src="screenshots/s5b-texas-checks-austin-375.jpg"
+              alt="Send 5 Austin on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s5b-texas-checks-austin.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 5 · Houston</h3>
+          <p class="subj">
+            Three checks before you introduce an investor client
+          </p>
+          <div class="frame">
+            <img
+              src="screenshots/s5c-texas-checks-houston-375.jpg"
+              alt="Send 5 Houston on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s5c-texas-checks-houston.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 5 · San Antonio</h3>
+          <p class="subj">
+            Three checks before you introduce an investor client
+          </p>
+          <div class="frame">
+            <img
+              src="screenshots/s5d-texas-checks-san-antonio-375.jpg"
+              alt="Send 5 San Antonio on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s5d-texas-checks-san-antonio.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 5 · other markets</h3>
+          <p class="subj">
+            Three checks before you introduce an investor client
+          </p>
+          <div class="frame">
+            <img
+              src="screenshots/s5-texas-checks-375.jpg"
+              alt="Send 5 other markets on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s5-texas-checks.html">Open the email</a>
+        </div>
+        <div class="shot">
+          <h3>Send 6 · day 48</h3>
+          <p class="subj">Got an investor client with equity in a rental?</p>
+          <div class="frame">
+            <img
+              src="screenshots/s6-one-client-in-mind-375.jpg"
+              alt="Send 6 on a phone"
+              loading="lazy"
+            />
+          </div>
+          <a href="s6-one-client-in-mind.html">Open the email</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
