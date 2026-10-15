@@ -203,11 +203,11 @@
       <p class="lede">
         Six cold emails to Texas MLS agents about one product: a second mortgage
         on a rental the client doesn't live in, for business purposes only. The
-        goal is an introduction to an investor client, not an application from
+        goal is an introduction to a client who owns a rental, not an application from
         the agent.
       </p>
       <p class="meta">
-        Draft 2026-10-14. Nothing has been sent, loaded or scheduled. Sources:
+        Draft 2026-10-14, revised 2026-10-15 after nine rounds of a five-persona reader panel built from the MLS data (subjects, asks, the terms line now in sends 1, 4 and 6, one send 2 for every agent). Nothing has been sent, loaded or scheduled. Sources:
         Drip plan.md, AUDIT-strategy-2026-10-14.md,
         AUDIT-accuracy-compliance-2026-10-14.md and the four PANEL files (the
         panel was four AI agents playing Texas agents, not real agents).
@@ -347,7 +347,7 @@
           <text class="t" x="150" y="172">
             Their next down payment is in a rental
           </text>
-          <text class="a" x="150" y="198">Ask: reply "investors"</text>
+          <text class="a" x="150" y="198">Ask: reply "rental"</text>
           <path class="ln" d="M380 214 V242" marker-end="url(#ah)" />
 
           <!-- send 2 -->
@@ -356,7 +356,7 @@
           <text class="t" x="150" y="296">
             Start the equity loan before the offer
           </text>
-          <text class="a" x="150" y="322">Ask: open the calculator</text>
+          <text class="a" x="150" y="322">Ask: with the client's OK, cc Jack</text>
           <path class="ln" d="M380 338 V366" marker-end="url(#ah)" />
 
           <!-- send 3 -->
@@ -440,13 +440,13 @@
             d="M100 814 V834 M287 814 V834 M473 814 V834 M660 814 V834 M100 834 H660 M380 834 V858"
           />
           <path class="ln" d="M380 848 V860" marker-end="url(#ah)" />
-          <text class="a" x="392" y="852">Ask: run the calculator</text>
+          <text class="a" x="392" y="852">Ask: with their OK, cc Jack</text>
 
           <!-- send 6 -->
           <rect class="send" x="130" y="864" width="500" height="92" rx="12" />
           <text class="d" x="150" y="888">SEND 6 · DAY 48</text>
           <text class="t" x="150" y="914">
-            One client in mind? Terms and the only rate
+            One client in mind? Terms in one line
           </text>
           <text class="a" x="150" y="940">
             Ask: reply with an intro, or do nothing
@@ -501,7 +501,7 @@
             1-4 unit rental worth $100K or more, held personally or in an LLC,
             short-term rentals included.
           </p>
-          <span class="ask">Reply "investors"</span>
+          <span class="ask">Reply "rental"</span>
           <p class="src">
             The MLS list has no "has investor clients" flag, so the one-word
             reply is the filter (plan section 3). The strategy audit's top
@@ -516,7 +516,7 @@
             underwriting. Starting it before the offer keeps the agent's closing
             from waiting on it.
           </p>
-          <span class="ask">Open the calculator</span>
+          <span class="ask">Next time a buyer mentions a rental they own, cc Jack</span>
           <p class="src">
             Moved up from old E5. The Austin panelist said 3-4 weeks is slow
             against a 25-30 day close, which is exactly why this email says to
@@ -560,7 +560,7 @@
             under 80% of value across all loans. Texas homestead rules in two
             sentences, then the market's counties and local page.
           </p>
-          <span class="ask">Run the calculator</span>
+          <span class="ask">Know a seller or past client with a rental? With their OK, cc Jack</span>
           <p class="src">
             Merges old E3 and E4. The Houston panelist stopped reading at the
             constitutional-law section, so the legal citations are gone. Before
@@ -572,9 +572,9 @@
           <div class="day">Send 6 · day 48</div>
           <h3>A real exit</h3>
           <p>
-            One client in mind? The terms in one line, including the only rate
-            in the series (fixed rates from 6.99%, typical terms, subject to
-            underwriting and market conditions). It says plainly that it's the
+            One client in mind? The terms in one line (fixed rates from 6.99%,
+            typical terms, subject to underwriting and market conditions); since
+            2026-10-15 the same terms also appear in sends 1 and 4. It says plainly that it's the
             last email.
           </p>
           <span class="ask">Reply with an intro, or do nothing</span>
@@ -665,8 +665,8 @@
             four panelists raised it.
           </li>
           <li>
-            Listing-only agents (3,462): send them 1, 4 and 6 only, or the full
-            series.
+            Listing-only agents: resolved 2026-10-15, full series for everyone
+            (agent type is not reliably known).
           </li>
           <li>Whether a reply stops the drip for that agent.</li>
           <li>A separate sending subdomain instead of jack@usam.net.</li>
@@ -685,7 +685,7 @@
       <div class="shots">
         <div class="shot">
           <h3>Send 1 · day 0</h3>
-          <p class="subj">Your investor client's next down payment</p>
+          <p class="subj">A seller you list for may own a rental they don't live in</p>
           <div class="frame">
             <img
               src="screenshots/s1-next-down-payment-375.jpg"
@@ -697,7 +697,7 @@
         </div>
         <div class="shot">
           <h3>Send 2 · day 6</h3>
-          <p class="subj">Start the equity loan before the offer</p>
+          <p class="subj">Next time a buyer mentions a rental they own</p>
           <div class="frame">
             <img
               src="screenshots/s2-before-the-offer-375.jpg"
@@ -734,7 +734,7 @@
         <div class="shot">
           <h3>Send 5 · Austin</h3>
           <p class="subj">
-            Three checks before you introduce an investor client
+            Three checks before you introduce a past client with a rental
           </p>
           <div class="frame">
             <img
@@ -748,7 +748,7 @@
         <div class="shot">
           <h3>Send 5 · Houston</h3>
           <p class="subj">
-            Three checks before you introduce an investor client
+            Three checks before you introduce a past client with a rental
           </p>
           <div class="frame">
             <img
@@ -762,7 +762,7 @@
         <div class="shot">
           <h3>Send 5 · San Antonio</h3>
           <p class="subj">
-            Three checks before you introduce an investor client
+            Three checks before you introduce a past client with a rental
           </p>
           <div class="frame">
             <img
@@ -776,7 +776,7 @@
         <div class="shot">
           <h3>Send 5 · other markets</h3>
           <p class="subj">
-            Three checks before you introduce an investor client
+            Three checks before you introduce a past client with a rental
           </p>
           <div class="frame">
             <img
@@ -789,7 +789,7 @@
         </div>
         <div class="shot">
           <h3>Send 6 · day 48</h3>
-          <p class="subj">Got an investor client with equity in a rental?</p>
+          <p class="subj">Know anyone who owns a rental they don't live in?</p>
           <div class="frame">
             <img
               src="screenshots/s6-one-client-in-mind-375.jpg"
